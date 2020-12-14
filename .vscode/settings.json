@@ -1,0 +1,6 @@
+{
+    "vscode-graphql.debug": false,
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true}
+}
