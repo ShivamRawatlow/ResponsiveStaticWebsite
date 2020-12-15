@@ -12,7 +12,7 @@ import React, { useContext } from 'react';
 import Lottie from 'react-lottie';
 import animationData from '../animations/landinganimation/data';
 import ButtonArrow from '../components/ui/ButtonArrow';
-import customSoftwareIcon from '../assets/Custom Software Icon.svg';
+import customSoftwareIcon from '../assets/customSoftwareIcon.svg';
 import websitesIcon from '../assets/websiteIcon.svg';
 import mobileAppsIcon from '../assets/mobileIcon.svg';
 import revolutionBackground from '../assets/repeatingBackground.svg';

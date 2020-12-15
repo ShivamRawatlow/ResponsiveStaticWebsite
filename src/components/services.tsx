@@ -11,7 +11,7 @@ import { Link } from 'react-router-dom';
 import { viContext } from '../context/value_index_context';
 import routeNames from '../names/routeNames';
 import ButtonArrow from './ui/ButtonArrow';
-import customSoftwareIcon from '../assets/Custom Software Icon.svg';
+import customSoftwareIcon from '../assets/customSoftwareIcon.svg';
 import websitesIcon from '../assets/websiteIcon.svg';
 import mobileAppsIcon from '../assets/mobileIcon.svg';
 
