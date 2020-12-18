@@ -94,6 +94,7 @@ const CustomSoftware = () => {
         direction='row'
         justify={matchesMD ? 'center' : undefined}
         className={classes.rowContainer}
+        style={{ marginTop: '5em' }}
       >
         <Hidden mdDown>
           <Grid
@@ -374,6 +375,7 @@ const CustomSoftware = () => {
         direction={matchesMD ? 'column' : 'row'}
         justify='space-between'
         className={classes.rowContainer}
+        style={{ marginBottom: '10em' }}
       >
         <Grid
           item

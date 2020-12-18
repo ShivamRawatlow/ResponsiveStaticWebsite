@@ -44,7 +44,6 @@ const MobileApps = () => {
   const theme = useTheme();
   const context = useContext(viContext);
   const matchesMD = useMediaQuery(theme.breakpoints.down('md'));
-  const matchesSM = useMediaQuery(theme.breakpoints.down('sm'));
   const matchesXS = useMediaQuery(theme.breakpoints.down('xs'));
   const defaultOptions = {
     loop: true,
@@ -63,7 +62,7 @@ const MobileApps = () => {
         direction='row'
         justify={matchesMD ? 'center' : undefined}
         className={classes.rowContainer}
-        style={{ marginBottom: '15em' }}
+        style={{ marginBottom: '15em', marginTop: '5em' }}
       >
         <Hidden mdDown>
           <Grid
@@ -215,6 +214,7 @@ const MobileApps = () => {
         container
         direction={matchesMD ? 'column' : 'row'}
         className={classes.rowContainer}
+        style={{ marginBottom: '10em' }}
       >
         <Grid item container direction='column' alignItems='center' md>
           <Grid item>

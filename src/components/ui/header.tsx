@@ -16,12 +16,13 @@ import {
   useMediaQuery,
 } from '@material-ui/core';
 import useScrollTrigger from '@material-ui/core/useScrollTrigger';
-import logo from '../../assets/homelogo.svg';
+import logo from '../../assets/openicon.svg';
 import { Link } from 'react-router-dom';
 import routeNames from '../../names/routeNames';
 import { useTheme } from '@material-ui/styles';
 import MenuIcon from '@material-ui/icons/Menu';
 import { viContext } from '../../context/value_index_context';
+import HomeIcon from '@material-ui/icons/Home';
 
 interface Props {
   children: React.ReactElement;
@@ -55,14 +56,15 @@ const useStyles = makeStyles((theme: any) => ({
     },
   },
   logo: {
-    margin: '.5rem',
     height: '6rem',
-    width: '9rem',
+    width: '6rem',
     [theme.breakpoints.down('md')]: {
-      height: '7em',
+      height: '4em',
+      width: '4rem',
     },
     [theme.breakpoints.down('xs')]: {
-      height: '5.5em',
+      height: '2.5em',
+      width: '2.5rem',
     },
   },
   tabContainer: {
@@ -85,10 +87,12 @@ const useStyles = makeStyles((theme: any) => ({
     },
   },
   logoContainer: {
-    padding: 0,
-    marginLeft: '3rem',
+    marginLeft: '2rem',
     '&:hover': {
       backgroundColor: 'transparent',
+    },
+    [theme.breakpoints.down('md')]: {
+      marginLeft: '1rem',
     },
   },
   menu: {
@@ -397,7 +401,7 @@ const Header = () => {
       <ElevationScroll>
         <AppBar className={classes.appBar}>
           <Toolbar disableGutters>
-            <Button
+            <IconButton
               className={classes.logoContainer}
               component={Link}
               to={routeNames.home.link}
@@ -405,9 +409,10 @@ const Header = () => {
                 context?.setActiveIndex(routeNames.home.activeIndex)
               }
               disableRipple
+              disableFocusRipple
             >
-              <img alt='company logo' className={classes.logo} src={logo} />
-            </Button>
+              <HomeIcon className={classes.logo} style={{ color: 'white' }} />
+            </IconButton>
             {matches ? drawer : tabs}
           </Toolbar>
         </AppBar>
